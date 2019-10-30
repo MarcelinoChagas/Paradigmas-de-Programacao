@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1572396863 source:d:\repositório local\paradigmas-de-programacao\atividade01\main.c
+	<stdio.h>
+	<stdlib.h>
+	"ListaSequencial.h"
+
+1572396020 d:\repositório local\paradigmas-de-programacao\atividade01\listasequencial.h
+
+1572396874 source:d:\repositório local\paradigmas-de-programacao\atividade01\listasequencial.c
+	<stdio.h>
+	<stdlib.h>
+	"ListaSequencial.h"
+
