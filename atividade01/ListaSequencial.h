@@ -5,6 +5,8 @@
 struct aluno {
     int matricula;
     char nome[30];
+    char telefone[11];
+    int idade;
     float n1, n2, n3;
 };
 
@@ -29,5 +31,8 @@ int remove_lista(Lista* li, int mat);
 // CONSULTA
 int consulta_lista_pos(Lista* li, int pos, struct aluno *al);
 int consulta_lista_mat(Lista* li, int mat, struct aluno *al);
+
+// ATUALIZAR
+int atualizar_lista(Lista* li, int mat, struct aluno al);
 
 #endif // LISTASEQUENCIAL_H_INCLUDED

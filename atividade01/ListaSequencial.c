@@ -7,6 +7,8 @@ struct lista {
     struct aluno dados[MAX]
 };
 
+typedef struct lista* Elem;
+
 Lista* cria_lista(){
     Lista *li;
     li = (Lista*) malloc(sizeof(struct lista));
@@ -144,4 +146,37 @@ int consulta_lista_mat(Lista* li, int mat, struct aluno *al){
     *al = li->dados[i];
 
     return 1;
+}
+
+
+// ATUALIZA
+int atualizar_lista(Lista* li, int mat, struct aluno al){
+    int x;
+
+    if(li == NULL)
+        return 0;
+    int k, i = 0;
+
+    while(i < li->qtd && li->dados[i].matricula != mat)
+        i++;
+    if(i == li->qtd) //Elemento nao encontrado
+        return 0;
+    else{
+        al = li->dados[i];
+        x = 1;
+    }
+
+    // k, i = 0
+    int j, l = 0;
+    if(x == 1){
+
+    while(l < li->qtd && li->dados[l].matricula < al.matricula)
+        l++;
+
+    for(j = li-> qtd-1; j >= l; j--)
+        li-> dados[j+1] = li -> dados[j];
+    li->dados[l] = al;
+    return 1;
+
+    }
 }
