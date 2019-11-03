@@ -2,7 +2,18 @@
 #include <stdlib.h>
 #include "ListaSequencial.h"
 
+#define VERSAO 1
+
+/*
+*   Valor 1 - Para VERSAO 1
+*   Valor 2 - Para VERSAO 2
+*   Valor 3 - Para VERSAO 3
+*/
+
+
 int main(){
+
+
 
     struct aluno al, a[5] = {{1,"Fulando de Tal","81977772222",19, 7.0, 6.0, 8.0},
                             {2,"Sicrano de La","81900003333",21, 7.1, 6.1, 8.1},
@@ -24,6 +35,7 @@ int main(){
     printf("\nValor Inserido");
     printf("\nTamanho da Lista: %d",tamanho_lista(li));
 
+#if VERSAO >= 2
     // TRECHO DE REMOCAO
     remove_lista(li,1);
     printf("\n\nValor Removido");
@@ -31,8 +43,9 @@ int main(){
     remove_lista(li,2);
     printf("\nValor Removido");
     printf("\nTamanho da Lista: %d",tamanho_lista(li));
+#endif // VERSAO2
 
-
+#if VERSAO >= 3
     // TRECHO CONSULTA
     int x;
     for(int i = 0; i < 4; i++)
@@ -45,6 +58,8 @@ int main(){
     printf("\n\nValor Atualizado");
     atualizar_lista(li,3,a[4]);
     printf("\nTamanho da Lista: %d",tamanho_lista(li));
+#endif // VERSAO3
 
     return 0;
+
 }

@@ -1,6 +1,6 @@
 #ifndef LISTASEQUENCIAL_H_INCLUDED
 #define LISTASEQUENCIAL_H_INCLUDED
-#define MAX 100
+#define MAX 10
 
 struct aluno {
     int matricula;
